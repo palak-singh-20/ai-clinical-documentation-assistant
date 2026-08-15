@@ -120,20 +120,20 @@ The Final Documentation Agent consolidates the outputs from the previous agents 
 
 ## 🏆 Capstone Highlights
 
-- 🤖 Built a **5-agent AI clinical documentation pipeline**
-- 🧠 Implemented specialized agents for **history extraction, clinical summarization, quality analysis, completeness checking, and final documentation**
-- ⚡ Developed a **FastAPI backend** for end-to-end AI workflow orchestration
-- 📋 Used **Pydantic structured models** for consistent and validated AI outputs
-- 🔗 Integrated **Groq LLM** for AI-powered clinical text processing
-- 🌐 Built an interactive **HTML, CSS, and JavaScript frontend**
-- 🔍 Automated identification of **missing clinical information**
-- 📊 Added **documentation quality and completeness analysis**
-- 📄 Generated consolidated **final clinical documentation**
-- 🔐 Implemented **environment-based API key management** to keep credentials secure
-- 📥 Added **copy and download functionality** for generated documentation
-- 🧪 Included testing for **LLM integration, structured outputs, and agent execution**
-- 🏗️ Designed the system with a **modular and extensible multi-agent architecture**
-- 🚀 Demonstrates practical application of **Generative AI, LLMs, APIs, structured outputs, and multi-agent systems**
+-  Built a **5-agent AI clinical documentation pipeline**
+-  Implemented specialized agents for **history extraction, clinical summarization, quality analysis, completeness checking, and final documentation**
+-  Developed a **FastAPI backend** for end-to-end AI workflow orchestration
+-  Used **Pydantic structured models** for consistent and validated AI outputs
+-  Integrated **Groq LLM** for AI-powered clinical text processing
+-  Built an interactive **HTML, CSS, and JavaScript frontend**
+-  Automated identification of **missing clinical information**
+-  Added **documentation quality and completeness analysis**
+-  Generated consolidated **final clinical documentation**
+-  Implemented **environment-based API key management** to keep credentials secure
+-  Added **copy and download functionality** for generated documentation
+-  Included testing for **LLM integration, structured outputs, and agent execution**
+-  Designed the system with a **modular and extensible multi-agent architecture**
+-  Demonstrates practical application of **Generative AI, LLMs, APIs, structured outputs, and multi-agent systems**
 
 # 🔮 Future Scope
 
