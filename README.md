@@ -137,19 +137,19 @@ The Final Documentation Agent consolidates the outputs from the previous agents 
 
 # 🔮 Future Scope
 
-- 🎙️ **Voice-to-Clinical-Notes** — Convert doctor-patient conversations into structured clinical documentation using speech-to-text.
-- 🏥 **EHR/EMR Integration** — Connect the assistant with electronic health record systems for seamless documentation workflows.
-- 🧠 **Medical RAG Integration** — Use Retrieval-Augmented Generation with trusted medical knowledge bases for better context-aware documentation.
-- 📊 **Documentation Quality Scoring** — Introduce quantitative quality and completeness scores to track documentation performance.
-- 🌐 **Multilingual Support** — Support consultation notes in multiple languages for wider accessibility.
-- 👥 **Role-Based Access Control** — Provide different access levels for doctors, nurses, administrators, and other healthcare staff.
-- 📈 **Analytics Dashboard** — Track documentation quality, missing information, processing time, and agent performance.
-- 🗃️ **Secure Patient History** — Maintain authorized access to previous clinical documentation and patient records.
-- 👨‍⚕️ **Human-in-the-Loop Review** — Allow clinicians to review, edit, and approve AI-generated documentation before final use.
-- ☁️ **Cloud Deployment** — Deploy the system on scalable cloud infrastructure for multi-user access.
-- 🔐 **Enhanced Security & Compliance** — Add authentication, encryption, audit logging, secure data storage, and healthcare compliance mechanisms.
-- 🧪 **Advanced Evaluation Framework** — Introduce automated evaluation of agent accuracy, consistency, completeness, and reliability.
-- 🔄 **Agent Optimization** — Improve agent coordination and enable specialized agents to dynamically handle different clinical documentation scenarios.
+-  **Voice-to-Clinical-Notes** — Convert doctor-patient conversations into structured clinical documentation using speech-to-text.
+-  **EHR/EMR Integration** — Connect the assistant with electronic health record systems for seamless documentation workflows.
+-  **Medical RAG Integration** — Use Retrieval-Augmented Generation with trusted medical knowledge bases for better context-aware documentation.
+-  **Documentation Quality Scoring** — Introduce quantitative quality and completeness scores to track documentation performance.
+-  **Multilingual Support** — Support consultation notes in multiple languages for wider accessibility.
+-  **Role-Based Access Control** — Provide different access levels for doctors, nurses, administrators, and other healthcare staff.
+-  **Analytics Dashboard** — Track documentation quality, missing information, processing time, and agent performance.
+-  **Secure Patient History** — Maintain authorized access to previous clinical documentation and patient records.
+-  **Human-in-the-Loop Review** — Allow clinicians to review, edit, and approve AI-generated documentation before final use.
+-  **Cloud Deployment** — Deploy the system on scalable cloud infrastructure for multi-user access.
+-  **Enhanced Security & Compliance** — Add authentication, encryption, audit logging, secure data storage, and healthcare compliance mechanisms.
+-  **Advanced Evaluation Framework** — Introduce automated evaluation of agent accuracy, consistency, completeness, and reliability.
+-  **Agent Optimization** — Improve agent coordination and enable specialized agents to dynamically handle different clinical documentation scenarios.
 
 ---
 
