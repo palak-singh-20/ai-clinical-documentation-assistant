@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Clinical Documentation Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div>
+
+            <h1>
+                AI Clinical Documentation Assistant
+            </h1>
+
+            <p>
+                Multi-agent clinical documentation and quality analysis
+            </p>
+
+        </div>
+
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            API Online
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =================================================
+             INPUT SECTION
+        ================================================== -->
+
+        <section class="input-card">
+
+            <h2>
+                Clinical Consultation
+            </h2>
+
+
+            <p class="description">
+
+                Enter the consultation notes below. The AI agents
+                will extract patient history, generate a clinical
+                summary, evaluate documentation quality, identify
+                missing information, and produce final documentation.
+
+            </p>
+
+
+            <label for="consultation">
+
+                Consultation Notes
+
+            </label>
+
+
+            <textarea
+                id="consultation"
+                placeholder="Enter consultation notes here..."
+            ></textarea>
+
+
+            <button id="processBtn">
+
+                Process Consultation
+
+            </button>
+
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+
+                Processing consultation...
+
+            </div>
+
+
+            <div
+                id="error"
+                class="error hidden"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESULTS
+        ================================================== -->
+
+        <section
+            id="results"
+            class="results hidden"
+        >
+
+            <h2>
+                Documentation Results
+            </h2>
+
+
+            <!-- =============================================
+                 PATIENT HISTORY
+            ============================================== -->
+
+            <div class="result-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Patient History
+                        </h3>
+
+                        <p class="card-description">
+                            Information extracted from the consultation notes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-icon">
+
+                        01
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PATIENT ID / CHIEF COMPLAINT -->
+
+                <div class="grid">
+
+
+                    <div class="info-box">
+
+                        <span class="label">
+                            Patient ID
+                        </span>
+
+                        <strong id="patientId">
+                            Not provided
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-box">
+
+                        <span class="label">
+                            Chief Complaint
+                        </span>
+
+                        <strong id="chiefComplaint">
+                            Not provided
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SYMPTOMS -->
+
+                <div class="field">
+
+                    <span class="label">
+                        Symptoms
+                    </span>
+
+                    <div
+                        id="symptoms"
+                        class="tags"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- MEDICAL HISTORY -->
+
+                <div class="field">
+
+                    <span class="label">
+                        Medical History
+                    </span>
+
+                    <div
+                        id="medicalHistory"
+                        class="tags"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- MEDICATIONS -->
+
+                <div class="field">
+
+                    <span class="label">
+                        Medications
+                    </span>
+
+                    <div
+                        id="medications"
+                        class="tags"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- ALLERGIES -->
+
+                <div class="field">
+
+                    <span class="label">
+                        Allergies
+                    </span>
+
+                    <div
+                        id="allergies"
+                        class="tags"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- FAMILY HISTORY -->
+
+                <div class="field">
+
+                    <span class="label">
+                        Family History
+                    </span>
+
+                    <div
+                        id="familyHistory"
+                        class="tags"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- SOCIAL HISTORY -->
+
+                <div class="field">
+
+                    <span class="label">
+                        Social History
+                    </span>
+
+                    <div
+                        id="socialHistory"
+                        class="tags"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- MISSING INFORMATION -->
+
+                <div class="field">
+
+                    <span class="label">
+                        Missing Information
+                    </span>
+
+                    <div
+                        id="missingInformation"
+                        class="tags"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 CLINICAL SUMMARY
+            ============================================== -->
+
+            <div class="result-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Clinical Summary
+                        </h3>
+
+                        <p class="card-description">
+                            AI-generated summary of the documented clinical information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-icon">
+
+                        02
+
+                    </div>
+
+                </div>
+
+
+                <div id="clinicalSummary">
+
+                    No summary generated.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 DOCUMENTATION QUALITY
+            ============================================== -->
+
+            <div class="result-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Documentation Quality
+                        </h3>
+
+                        <p class="card-description">
+                            Evaluation of clarity and quality of the clinical documentation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-icon success">
+
+                        03
+
+                    </div>
+
+                </div>
+
+
+                <div id="documentationQuality">
+
+                    No quality report generated.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 DOCUMENTATION COMPLETENESS
+            ============================================== -->
+
+            <div class="result-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Documentation Completeness
+                        </h3>
+
+                        <p class="card-description">
+                            Identifies clinically relevant information that may be missing from the documentation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-icon warning">
+
+                        04
+
+                    </div>
+
+                </div>
+
+
+                <div id="documentationCompleteness">
+
+                    No completeness report generated.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 FINAL DOCUMENTATION
+            ============================================== -->
+
+            <div class="result-card final-card">
+
+
+                <div class="final-header">
+
+
+                    <div>
+
+                        <h3>
+                            Final Documentation
+                        </h3>
+
+                        <p class="card-description">
+                            Consolidated clinical documentation produced by the final documentation agent.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="final-actions">
+
+
+                        <button
+                            id="copyBtn"
+                            class="secondary-btn"
+                            type="button"
+                        >
+
+                            📋 Copy
+
+                        </button>
+
+
+
+                        <button
+                            id="downloadBtn"
+                            class="secondary-btn"
+                            type="button"
+                        >
+
+                            📥 Download
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <pre id="finalDocumentation">No final documentation generated.</pre>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             NEW CONSULTATION BUTTON
+        ================================================== -->
+
+        <div class="new-consultation-wrapper">
+
+            <button
+                id="newConsultationBtn"
+                class="new-consultation-btn"
+                type="button"
+            >
+
+                🔄 Start New Consultation
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            AI Clinical Documentation Assistant
+        </p>
+
+        <span>
+            Multi-Agent Clinical AI System
+        </span>
+
+    </footer>
+
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
