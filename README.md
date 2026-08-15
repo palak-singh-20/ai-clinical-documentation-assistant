@@ -84,37 +84,69 @@ The primary objectives of this project are:
 
 ---
 
-# 📸 Screenshots
+# Screenshots
 
-## 📝 Clinical Consultation
+## Application Dashboard
 
-The clinician can enter unstructured consultation notes into the web interface and process them through the multi-agent pipeline.
+![Application Dashboard](dashboard.png)
 
-![Clinical Consultation](screenshots/consultation.png)
-
----
-
-## 👤 Patient History Extraction
-
-The Patient History Agent extracts structured information such as symptoms, medical history, medications, allergies, family history, and social history.
-
-![Patient History](screenshots/patient-history.png)
+The main interface of the AI Clinical Documentation Assistant. Users can enter consultation notes and start the AI-powered documentation pipeline.
 
 ---
 
-## 🧠 AI Documentation Analysis
+## Consultation Input
 
-The system generates a clinical summary, evaluates documentation quality, and identifies missing clinical information.
+![Consultation Input](consultation-input.png)
 
-![AI Documentation Analysis](screenshots/analysis.png)
+The consultation interface where users provide unstructured clinical notes. These notes are sent to the backend for processing by the multi-agent pipeline.
 
 ---
 
-## 📄 Final Documentation
+## Patient History Extraction
 
-The Final Documentation Agent consolidates the outputs from the previous agents into structured clinical documentation.
+![Patient History](patient-history.png)
 
-![Final Documentation](screenshots/final-documentation.png)
+The Patient History Agent extracts structured information including patient ID, chief complaint, symptoms, medical history, medications, allergies, family history, and social history.
+
+---
+
+## Clinical Summary
+
+![Clinical Summary](clinical-summary.png)
+
+The Clinical Summary Agent converts the extracted information into a concise and structured clinical summary.
+
+---
+
+## Documentation Quality & Completeness
+
+![Documentation Quality and Completeness](quality-completeness.png)
+
+The Documentation Quality and Completeness Agents evaluate the documentation and identify missing or potentially important clinical information.
+
+---
+
+## Final Clinical Documentation
+
+![Final Documentation](final-documentation.png)
+
+The Final Documentation Agent consolidates the outputs from the different agents into a structured clinical document.
+
+---
+
+# System Architecture
+
+![System Architecture](architecture.png)
+
+The overall architecture showing the interaction between the frontend, FastAPI backend, multi-agent pipeline, Groq LLM, structured models, and final output.
+
+---
+
+# Agent Architecture
+
+![Agent Architecture](health_arch.png)
+
+The multi-agent architecture showing the specialized agents responsible for patient history extraction, clinical summarization, documentation quality analysis, completeness checking, and final documentation generation.
 
 ---
 
