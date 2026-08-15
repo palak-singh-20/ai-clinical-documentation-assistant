@@ -102,14 +102,6 @@ The consultation interface where users provide unstructured clinical notes. Thes
 
 ---
 
-## Patient History Extraction
-
-![Patient History](patient-history.png)
-
-The Patient History Agent extracts structured information including patient ID, chief complaint, symptoms, medical history, medications, allergies, family history, and social history.
-
----
-
 ## Clinical Summary
 
 ![Clinical Summary](clinical-summary.png)
@@ -131,14 +123,6 @@ The Documentation Quality and Completeness Agents evaluate the documentation and
 ![Final Documentation](final-documentation.png)
 
 The Final Documentation Agent consolidates the outputs from the different agents into a structured clinical document.
-
----
-
-# System Architecture
-
-![System Architecture](architecture.png)
-
-The overall architecture showing the interaction between the frontend, FastAPI backend, multi-agent pipeline, Groq LLM, structured models, and final output.
 
 ---
 
